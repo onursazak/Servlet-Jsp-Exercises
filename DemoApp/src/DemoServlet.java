@@ -1,4 +1,6 @@
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -15,11 +17,10 @@ public class DemoServlet extends HttpServlet
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String name = "Navin";
 		
+		List<Student> studs = Arrays.asList(new Student(1,"Mustafa"),new Student(2,"Onur"),new Student(3,"Sevgi"));
 		
-		
-		request.setAttribute("label", name);
+		request.setAttribute("students", studs);
 		
 		//calling jsp file from servlet file.
 		RequestDispatcher rd = request.getRequestDispatcher("display.jsp");

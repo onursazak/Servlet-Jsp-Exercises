@@ -10,12 +10,13 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body>
-	 <%--DemoServlet'deki label'in değerini yazar. (Expression Language) --%>	
-	${label}<br>
-
+<body>	
+	${students} <br><br>
 	
-	<c:out value="${label}" />
+	<c:forEach items="${students}" var="s"> 
+		${s} <br/>
+	
+	</c:forEach>
 
 </body>
 </html>
