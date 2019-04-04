@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    
+<%-- out tag'ını kullanabilmemiz için bunu eklememiz gerekiyor --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,15 +11,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-	
+	 <%--DemoServlet'deki label'in değerini yazar. (Expression Language) --%>	
+	${label}<br>
 
-	<%
-		String name = request.getAttribute("label1").toString();
-		out.println(name);
-	%>
 	
-	 <%--DemoServlet'deki label'in değerini yazar. --%>	
-	${label1} 	
+	<c:out value="${label}" />
 
 </body>
 </html>

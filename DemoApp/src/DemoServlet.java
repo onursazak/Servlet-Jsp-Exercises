@@ -17,8 +17,9 @@ public class DemoServlet extends HttpServlet
 		// TODO Auto-generated method stub
 		String name = "Navin";
 		
-		request.setAttribute("label1", name);
 		
+		
+		request.setAttribute("label", name);
 		
 		//calling jsp file from servlet file.
 		RequestDispatcher rd = request.getRequestDispatcher("display.jsp");
